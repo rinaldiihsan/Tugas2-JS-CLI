@@ -1,6 +1,6 @@
 # Javascript CLI by Mas Irhas
 
-Modify by Rinaldi Ihsan Setiawan
+Modified by Rinaldi Ihsan Setiawan
 
 # Cara menjalankan program :
 
