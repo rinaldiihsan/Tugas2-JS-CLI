@@ -134,7 +134,7 @@ const hapusData = () => {
       console.log('Indeks Data Tidak Valid !');
     } else {
       const deletedItem = databaseKontak.splice(indexData, 1);
-      console.log(`Data dengan nama ${deletedItem[0].nama} berhasil dihapus dari database!`);
+      console.log(`Data dengan nama ${deletedItem[0].nama} berhasil dihapus dari database!!`);
     }
     kembali();
   });
