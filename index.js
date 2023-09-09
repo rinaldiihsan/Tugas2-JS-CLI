@@ -129,14 +129,12 @@ const pencarianData = () => {
 };
 
 const hapusData = () => {
-  readline.question('Masukan Nama Yang Ingin Dihapus : ', (nama) => {
-    const data = databaseKontak.filter((Kontak) => Kontak.nama === nama);
-    if (data.length > 0) {
-      const index = databaseKontak.indexOf(data[0]);
-      databaseKontak.splice(index, 1);
-      console.log(`Data dengan nama ${nama} berhasil dihapus dari database!`);
+  readline.question('Masukan Indeks Data Yang Ingin Dihapus : ', (indexData) => {
+    if (indexData < 0 || indexData >= databaseKontak.length) {
+      console.log('Indeks Data Tidak Valid !');
     } else {
-      console.log('Data Tidak Ditemukan !');
+      const deletedItem = databaseKontak.splice(indexData, 1);
+      console.log(`Data dengan nama ${deletedItem[0].nama} berhasil dihapus dari database!`);
     }
     kembali();
   });
